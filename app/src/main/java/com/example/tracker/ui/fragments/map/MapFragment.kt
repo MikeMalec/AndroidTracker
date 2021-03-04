@@ -46,7 +46,7 @@ class MapFragment : Fragment(R.layout.map_fragment) {
         setInfoClick()
         observeSaveResponse()
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
-            binding.mapView.visibility = View.GONE
+//            binding.mapView.visibility = View.GONE
             findNavController().popBackStack()
         }
     }
@@ -55,7 +55,7 @@ class MapFragment : Fragment(R.layout.map_fragment) {
         binding.mapView.getMapAsync {
             lifecycleScope.launch {
                 delay(250)
-                binding.mapView.visibility = View.VISIBLE
+//                binding.mapView.visibility = View.VISIBLE
             }
             map = it
             observePosition()

@@ -33,7 +33,7 @@ object AppModule {
     @Singleton
     @Provides
     fun provideRetrofit(gson: Gson): Retrofit.Builder {
-        return Retrofit.Builder().baseUrl("https://.xyz/")
+        return Retrofit.Builder().baseUrl("https://neatnotes.xyz/")
             .addConverterFactory(GsonConverterFactory.create(gson))
     }
 

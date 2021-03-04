@@ -42,8 +42,8 @@ class TrackingService : LifecycleService(), SensorEventListener {
     @Inject
     lateinit var sensorManager: SensorManager
 
-    @Inject
-    lateinit var stepSensor: Sensor
+//    @Inject
+//    lateinit var stepSensor: Sensor
 
     @Inject
     lateinit var dataStoreRepository: DataStoreRepository
@@ -93,7 +93,7 @@ class TrackingService : LifecycleService(), SensorEventListener {
         if (!setInitialSteps) {
             setInitialSteps = true
             steps?.also { initialSteps = steps }
-            sensorManager.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI)
+//            sensorManager.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI)
         }
     }
 
