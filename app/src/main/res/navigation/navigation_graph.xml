@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph"
+    android:label="Tracker"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.tracker.ui.fragments.map.MapFragment"
+        android:label="Tracker" />
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.tracker.ui.fragments.start.StartFragment"
+        android:label="Tracker">
+        <action
+            android:id="@+id/action_startFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_routesFragment"
+            app:destination="@id/routesFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routesFragment"
+        android:name="com.example.tracker.ui.fragments.routes.RoutesFragment"
+        android:label="Zapisane trasy">
+        <action
+            android:id="@+id/action_routesFragment_to_routeFragment2"
+            app:destination="@id/routeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeFragment2"
+        android:name="com.example.tracker.ui.fragments.routes.route.RouteFragment"
+        android:label="{createdAt}">
+        <argument
+            android:name="route"
+            app:argType="com.example.tracker.data.db.Route" />
+        <argument
+            android:name="createdAt"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_routeFragment2_to_routeMapFragment"
+            app:destination="@id/routeMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeMapFragment"
+        android:name="com.example.tracker.ui.fragments.routes.route.RouteMapFragment"
+        android:label="{createdAt}">
+        <argument
+            android:name="route"
+            app:argType="com.example.tracker.data.db.Route" />
+        <argument
+            android:name="createdAt"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.example.tracker.ui.fragments.stats.StatisticsFragment"
+        android:label="Statystyki" />
+</navigation>

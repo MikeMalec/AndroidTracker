@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvTotalTimeStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="CAŁKOWITY CZAS"
+        android:textColor="@color/main_green"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTimeValue"
+        app:layout_constraintStart_toStartOf="@+id/tvTimeValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeValue" />
+
+    <TextView
+        android:id="@+id/tvTotalDistanceStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="CAŁKOWITY DYSTANS"
+        android:textColor="@color/main_green"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvDistanceValue"
+        app:layout_constraintStart_toStartOf="@+id/tvDistanceValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvDistanceValue" />
+
+    <TextView
+        android:id="@+id/tvTotalAvgSpeedStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="PRZECIĘTNA PRĘDKOŚĆ"
+        android:textColor="@color/main_green"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvAvgSpeedValue"
+        app:layout_constraintStart_toStartOf="@+id/tvAvgSpeedValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvgSpeedValue" />
+
+    <TextView
+        android:id="@+id/tvTotalStepsStats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ILOŚĆ KROKÓW"
+        android:textColor="@color/main_green"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalStepsValue"
+        app:layout_constraintStart_toStartOf="@+id/tvTotalStepsValue"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalStepsValue" />
+
+    <TextView
+        android:id="@+id/tvTimeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevan"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/main_green"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvDistanceValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDistanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevan"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/main_green"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvAvgSpeedValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTimeValue" />
+
+    <TextView
+        android:id="@+id/tvAvgSpeedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevan"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/main_green"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvTotalStepsValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDistanceValue" />
+
+    <TextView
+        android:id="@+id/tvTotalStepsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevan"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/main_green"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvgSpeedValue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

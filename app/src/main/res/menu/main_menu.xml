@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/showSavedRoutesMenuItem"
+        android:icon="@drawable/saved_icon"
+        android:title="@string/saved_routes"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/showStats"
+        android:icon="@drawable/stats_icon"
+        android:title="@string/stats"
+        app:showAsAction="always" />
+</menu>
